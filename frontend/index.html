@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login - Municipal Waste Billing System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="center-page">
+    <div class="card auth-card">
+        <h2>🗑️ Municipal Waste Billing System</h2>
+        <h3>Staff Login</h3>
+        <div id="alertBox" class="alert" style="display:none;"></div>
+        <form id="loginForm">
+            <label>Username</label>
+            <input type="text" id="username" required autofocus>
+
+            <label>Password</label>
+            <input type="password" id="password" required>
+
+            <button type="submit" class="btn btn-primary">Log In</button>
+        </form>
+        <p class="muted">No account? <a href="register.html">Register here</a></p>
+        <p class="muted small">Demo admin: <code>admin</code> / <code>admin123</code></p>
+    </div>
+</div>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

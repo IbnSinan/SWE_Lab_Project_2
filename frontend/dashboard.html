@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - Municipal Waste Billing System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="brand">🗑️ Municipal Waste Billing System</div>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="residents.html">Residents</a>
+        <a href="bills.html">Bills</a>
+        <span class="nav-user" id="navUser"></span>
+        <a href="#" id="logoutLink">Logout</a>
+    </div>
+</nav>
+
+<main class="container">
+    <h2>Dashboard</h2>
+
+    <div class="stat-grid">
+        <div class="stat-card">
+            <div class="stat-value" id="statResidents">-</div>
+            <div class="stat-label">Registered Residents</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" id="statBills">-</div>
+            <div class="stat-label">Total Bills</div>
+        </div>
+        <div class="stat-card warn">
+            <div class="stat-value" id="statUnpaid">-</div>
+            <div class="stat-label">Unpaid Bills</div>
+        </div>
+        <div class="stat-card ok">
+            <div class="stat-value" id="statPaid">-</div>
+            <div class="stat-label">Paid Bills</div>
+        </div>
+        <div class="stat-card warn">
+            <div class="stat-value" id="statDue">-</div>
+            <div class="stat-label">Total Due</div>
+        </div>
+        <div class="stat-card ok">
+            <div class="stat-value" id="statCollected">-</div>
+            <div class="stat-label">Total Collected</div>
+        </div>
+    </div>
+
+    <h3>Recent Bills</h3>
+    <table class="data-table">
+        <tr><th>Bill ID</th><th>Resident</th><th>Month</th><th>Amount</th><th>Status</th></tr>
+        <tbody id="recentBillsBody">
+            <tr><td colspan="5" class="muted">Loading...</td></tr>
+        </tbody>
+    </table>
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

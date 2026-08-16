@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bills - Municipal Waste Billing System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="brand">🗑️ Municipal Waste Billing System</div>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="residents.html">Residents</a>
+        <a href="bills.html">Bills</a>
+        <span class="nav-user" id="navUser"></span>
+        <a href="#" id="logoutLink">Logout</a>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="card" style="max-width:100%; margin-bottom:24px;">
+        <h3>Generate Waste Collection Bill</h3>
+        <form id="billForm">
+            <label>Resident</label>
+            <select id="resident_id" required></select>
+
+            <div class="form-row">
+                <div>
+                    <label>Billing Month</label>
+                    <input type="text" id="billing_month" placeholder="e.g. August 2026" required>
+                </div>
+                <div>
+                    <label>Amount (৳)</label>
+                    <input type="number" step="0.01" id="amount" required>
+                </div>
+            </div>
+
+            <label>Due Date</label>
+            <input type="text" id="due_date" placeholder="e.g. 2026-09-10">
+
+            <button type="submit" class="btn btn-primary">Generate Bill</button>
+        </form>
+    </div>
+
+    <div class="page-header">
+        <h2>Waste Collection Bills</h2>
+    </div>
+    <table class="data-table">
+        <tr><th>Bill ID</th><th>Resident</th><th>Month</th><th>Amount</th><th>Due Date</th><th>Status</th><th>Actions</th></tr>
+        <tbody id="billsBody">
+            <tr><td colspan="7" class="muted">Loading...</td></tr>
+        </tbody>
+    </table>
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/bills.js"></script>
+</body>
+</html>
